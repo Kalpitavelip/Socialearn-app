@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,10 +17,11 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8">
-          <a href="#">Home</a>
-          <a href="#">Feature</a>
-          <a href="#">Community</a>
-          <a href="/login">Login</a>
+          <Link href="#">Home</Link>
+          <Link href="#">Feature</Link>
+          <Link href="#">Community</Link>
+          <Link href="/login">Login</Link>
+          <Link href="/signup">Sign Up</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -30,7 +32,6 @@ export default function Navbar() {
           ☰
         </button>
       </nav>
-
       {/*Main Menu*/}
       {isMenuOpen && (
         <div className="flex flex-col gap-6 px-6 pb-6 md:hidden">
